@@ -1,17 +1,23 @@
 import React from 'react';
-import {View, StyleSheet} from 'react-native';
+import {StyleSheet} from 'react-native';
+import {SafeAreaProvider} from 'react-native-safe-area-context';
+import SafeAreaView from 'react-native-safe-area-view';
 import {HomeStack} from './src/navigation/HomeStack';
 
 const App = function () {
   return (
-    <View style={styles.View}>
-      <HomeStack />
-    </View>
+    <SafeAreaProvider>
+      <SafeAreaView
+        style={styles.SafeAreaView}
+        forceInset={{bottom: 'never', top: 'never', horizontal: 'never'}}>
+        <HomeStack />
+      </SafeAreaView>
+    </SafeAreaProvider>
   );
 };
 
 const styles = StyleSheet.create({
-  View: {flex: 1},
+  SafeAreaView: {flex: 1},
   mapView: {flex: 1},
 });
 
