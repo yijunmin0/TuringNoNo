@@ -28,14 +28,8 @@
 	<true/>
 	<key>NSAppTransportSecurity</key>
 	<dict>
-		<key>NSExceptionDomains</key>
-		<dict>
-			<key>localhost</key>
-			<dict>
-				<key>NSExceptionAllowsInsecureHTTPLoads</key>
-				<true/>
-			</dict>
-		</dict>
+    	<key>NSAllowsArbitraryLoads</key>
+    	<true/>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Program requires GPS to track cars and job orders</string>
@@ -72,5 +66,6 @@
         <string>SimpleLineIcons.ttf</string>
         <string>Zocial.ttf</string>
     </array>
+
 </dict>
 </plist>
